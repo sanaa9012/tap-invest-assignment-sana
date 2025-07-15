@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Travel Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>🌴 Smart Travel Assistant</h1>
+    <p>Your personal trip buddy — right in your browser</p>
+  </header>
+  <main class="grid-container">
+    <section class="card">
+      <h2>📍 Find Me on the Map</h2>
+      <button onclick="getLocation()">Get Location</button>
+      <p id="location-output" class="output"></p>
+    </section>
+    <section class="card">
+      <h2>📶 Your Current Network</h2>
+      <p id="network-info" class="output"></p>
+    </section>
+    <section class="card">
+      <h2>⏰ Set a Quick Reminder</h2>
+      <div class="input-group">
+        <input type="text" id="reminder-text" placeholder="Leave for airport at 3PM"/>
+        <button onclick="setReminder()">Add</button>
+      </div>
+      <ul id="reminder-list"></ul>
+    </section>
+    <section class="card full-width">
+      <h2>🎨 Draw Your Route</h2>
+      <canvas id="routeCanvas" width="600" height="300"></canvas>
+    </section>
+    <section class="card full-width">
+      <h2>📸 Dream Destinations</h2>
+      <div class="gallery">
+        <img class="lazy" data-src="assets/img1.jpg" width="250"/>
+        <img class="lazy" data-src="assets/img2.jpg" width="250"/>
+        <img class="lazy" data-src="assets/img3.jpg" width="250"/>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Made with ❤️ for TAP Invest Assignment</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
